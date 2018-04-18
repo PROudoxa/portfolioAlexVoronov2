@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.0.1)
+  - GithubPilot (1.1.11):
+    - Alamofire (~> 4.0.0)
+
+DEPENDENCIES:
+  - GithubPilot (~> 1.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  GithubPilot: 8e31d038dcaa488afc8987ab7aefb3fea5867ae2
+
+PODFILE CHECKSUM: 51324345b18cfdbdba96b098a2872e33a00423ce
+
+COCOAPODS: 1.2.1
