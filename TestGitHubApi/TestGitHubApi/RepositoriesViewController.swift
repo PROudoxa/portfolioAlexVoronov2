@@ -13,9 +13,10 @@ class RepositoriesViewController: UIViewController {
     // MARK: Properties
     var user = User()
     var searchManager = SearchManager()
+    var lastSearchRequest: String = ""
     
     // MARK: IBOutlets
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalNumberLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -29,6 +30,15 @@ class RepositoriesViewController: UIViewController {
         
         // "findRepositoriesFor" launches request and notification gets it
         NotificationCenter.default.addObserver(self, selector: #selector(gotRepositoriesAndUser), name: NSNotification.Name(rawValue: "ToRepositories"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if lastSearchRequest != "" {
+            searchBar.text = lastSearchRequest
+        }
+        
+        //searchBar.becomeFirstResponder()
     }
     
     // MARK: Navigation
@@ -51,11 +61,13 @@ class RepositoriesViewController: UIViewController {
 extension RepositoriesViewController {
     
     @IBAction func findRepositoriesTapped(_ sender: UIButton) {
-        guard textField.text != "", textField.text != nil else { return }
+        guard let searchRequest = searchBar.text, searchRequest != "" else { return }
+        
+        lastSearchRequest = searchRequest
         
         spinnerActivity.startAnimating()
         
-        let gitHubLogin = textField.text!
+        let gitHubLogin = searchRequest
         
         user = User()
         
