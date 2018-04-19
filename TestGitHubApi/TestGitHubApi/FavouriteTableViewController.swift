@@ -230,7 +230,7 @@ extension FavouriteTableViewController {
             self.performSegue(withIdentifier: "editFavourite", sender: nil)
         }
         
-        edit.backgroundColor = .yellow
+        edit.backgroundColor = .blue
         
         return [edit, delete]
     }
