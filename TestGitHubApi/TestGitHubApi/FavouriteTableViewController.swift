@@ -23,6 +23,10 @@ class FavouriteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let favVC = navigationController?.topViewController as? FavouriteTableViewController {
+            favVC.title = "Favourites"
+        }
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         coreDataStack = appDelegate.coreDataStack
         

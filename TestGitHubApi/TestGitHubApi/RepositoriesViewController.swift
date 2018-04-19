@@ -26,19 +26,18 @@ class RepositoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if lastSearchRequest != "" {
+            searchBar.text = lastSearchRequest
+        }
+        
         setDefaultTextsForLabels()
         
         // "findRepositoriesFor" launches request and notification gets it
         NotificationCenter.default.addObserver(self, selector: #selector(gotRepositoriesAndUser), name: NSNotification.Name(rawValue: "ToRepositories"), object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        if lastSearchRequest != "" {
-            searchBar.text = lastSearchRequest
-        }
-        
-        //searchBar.becomeFirstResponder()
+    override func viewDidAppear(_ animated: Bool) {
+        searchBar.resignFirstResponder()
     }
     
     // MARK: Navigation
