@@ -21,10 +21,10 @@ Hi there,
 
 Welcome to app "TestGitHubApi"
 
-![screenshot](https://github.com/PROudoxa/git-first/blob/master/github1.jpg)
-![screenshot](https://github.com/PROudoxa/git-first/blob/master/github2.jpg)
-![screenshot](https://github.com/PROudoxa/git-first/blob/master/github3.jpg)
-![screenshot](https://github.com/PROudoxa/git-first/blob/master/github4.jpg)
+![screenshot](https://github.com/PROudoxa/portfolioAlexVoronov2/blob/master/github1.jpg)
+![screenshot](https://github.com/PROudoxa/portfolioAlexVoronov2/blob/master/github2.jpg)
+![screenshot](https://github.com/PROudoxa/portfolioAlexVoronov2/blob/master/github3.jpg)
+![screenshot](https://github.com/PROudoxa/portfolioAlexVoronov2/blob/master/github4.jpg)
 
 This app provides you opportunity for searching repositories for defined github User. Also, you are able to get their detail information and edit some data in your favourite list.
 You can save repo to your favourite list. Also you can go to repo's webpage.
