@@ -32,6 +32,9 @@ class RepositoriesViewController: UIViewController {
         
         setDefaultTextsForLabels()
         
+        // TODO: make keyboard not to cover content
+        // notifcenter...
+        
         // "findRepositoriesFor" launches request and notification gets it
         NotificationCenter.default.addObserver(self, selector: #selector(gotRepositoriesAndUser), name: NSNotification.Name(rawValue: "ToRepositories"), object: nil)
     }

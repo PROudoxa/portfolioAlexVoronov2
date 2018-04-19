@@ -24,6 +24,7 @@ class WebRepoViewController: UIViewController {
         
         repoWebView.delegate = self
         
+        loadSpinner.startAnimating()
         showRepoWebPage()
     }
 }
@@ -52,7 +53,7 @@ private extension WebRepoViewController {
 extension WebRepoViewController: UIWebViewDelegate {
     
     func webViewDidStartLoad(_ webView: UIWebView) {
-        loadSpinner.startAnimating()
+        //loadSpinner.startAnimating()
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
